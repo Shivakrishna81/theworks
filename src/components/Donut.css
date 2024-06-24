@@ -1,0 +1,51 @@
+.donut-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.donut {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#9edea0 25%, #e2b3bd 25% 50%, #fac36f 50% 75%, #67b7f9 75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.donut-hole {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.donut:hover {
+    transform: scale(1.1);
+}
+
+.donut-text {
+    position: absolute;
+    z-index: 2;
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+}
+
+.first-person-view .donut:hover {
+    animation: rotate-once 1s linear;
+}
+
+@keyframes rotate-once {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
